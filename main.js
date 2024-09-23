@@ -6,7 +6,7 @@
 
 let button = document.getElementById("button");
 
-button.addEventListener("click", function(){
+button.addEventListener("click", function () {
     console.log("Button clicked");
 })
 
@@ -16,7 +16,7 @@ button.addEventListener("click", function(){
 
 // b. add event listener on click to the button, function should change the background color of the button to red
 
-button.addEventListener("click", function changeBg(){
+button.addEventListener("click", function changeBg() {
     button.style.backgroundColor = "red";
 })
 
@@ -26,7 +26,7 @@ button.addEventListener("click", function changeBg(){
 
 // b. add event listener on click to the button, function should change the background color of the button to red and change the text of the button to "Clicked"
 
-button.addEventListener("click", function changeBgAndText(){
+button.addEventListener("click", function changeBgAndText() {
     button.style.backgroundColor = "red";
     button.textContent = "Clickee";
 })
@@ -40,7 +40,7 @@ button.addEventListener("click", function changeBgAndText(){
 // c. add event listener on click to the button, function should console log the value of the input field
 
 let input = document.getElementById("input");
-button.addEventListener("click", function(){
+button.addEventListener("click", function () {
     console.log(input.value);
 })
 
@@ -50,6 +50,13 @@ button.addEventListener("click", function(){
 
 // b. when button is clicked, function should create a div element and append it to the body with the text "Hello World"
 
+button.addEventListener("click", function () {
+    let div = document.createElement("div");
+    div.textContent = "Hello World";
+    document.body.appendChild(div);
+
+})
+
 // 6. Create a HTML file
 
 // a. add a button
@@ -57,6 +64,12 @@ button.addEventListener("click", function(){
 // b. add an input field
 
 // c. when button is clicked, function should create a div element and append it to the body with the text of the input field
+
+button.addEventListener("click", function () {
+    let div = document.createElement("div");
+    div.textContent = input.value;
+    document.body.appendChild(div);
+})
 
 // 7. Create a HTML file
 
@@ -67,6 +80,17 @@ button.addEventListener("click", function(){
 // c. when button is clicked, function should create a div element and append it to the body with the text of the input field
 
 // d. when div is clicked, function should change the background color of the div to red
+
+button.addEventListener("click", function () {
+    let div = document.createElement("div");
+    div.textContent = input.value;
+    document.body.appendChild(div);
+    div.addEventListener("click", function () {
+        div.style.backgroundColor = "red";
+    })
+})
+
+
 
 // 8. Create a Todo app that will display todo list
 
@@ -79,3 +103,4 @@ button.addEventListener("click", function(){
 // d. user should be able to edit a todo
 
 // c. add timestamp to the todo when it was created
+
